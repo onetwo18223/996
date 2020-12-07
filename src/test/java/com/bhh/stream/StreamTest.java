@@ -227,12 +227,13 @@ public class StreamTest {
     }
 
     //终端操作
+
     /**
      * allMatch（断言型函数）：判断流中数据是否符合条件返回ture和false,
      * 短路操作（执行代码时一有不符合就返回（全部符合条件返回ture））
      */
     @Test
-    public void allMatchTest(){
+    public void allMatchTest() {
         boolean judge = list.stream()
 
                 .peek(sku -> {
@@ -250,7 +251,7 @@ public class StreamTest {
      * 若是无符合条件的数据，就返回false
      */
     @Test
-    public void anyMatchTest(){
+    public void anyMatchTest() {
         boolean judge = list.stream()
 
                 .peek(sku -> {
@@ -266,7 +267,7 @@ public class StreamTest {
      * noneMatch：一有符合就返回false（全部不符合返回ture）
      */
     @Test
-    public void noneMatchTest(){
+    public void noneMatchTest() {
         boolean judge = list.stream()
 
                 .peek(sku -> System.out.println(sku.getSkuName()))
@@ -280,7 +281,7 @@ public class StreamTest {
      * findFirst：获取流中的第一个数据
      */
     @Test
-    public void findFirstTest(){
+    public void findFirstTest() {
         Optional<Sku> sku = list.stream()
                 .findFirst();
 
@@ -290,11 +291,11 @@ public class StreamTest {
     /**
      * findAny和findFirst：
      * 在并行的条件下：findAny表示获取任意元素，有随机性
-     *              findFirst表示获取第一个元素，但是有限制性
+     * findFirst表示获取第一个元素，但是有限制性
      * 在串行的条件下：findAny和fingFirst表达的意思没有什么差别
      */
     @Test
-    public void findAnyTest(){
+    public void findAnyTest() {
         Optional<Sku> skuList = list.stream()
                 .findAny();
 
@@ -305,7 +306,7 @@ public class StreamTest {
      * max（）：获取最大值
      */
     @Test
-    public void maxTest(){
+    public void maxTest() {
         OptionalDouble optionalDouble = list.stream()
                 //中间操作
                 //mapToDouble：将数据映射为double类型
@@ -320,7 +321,7 @@ public class StreamTest {
      * min（）：获取最小值
      */
     @Test
-    public void minTest(){
+    public void minTest() {
         OptionalDouble optionalDouble = list.stream()
                 .mapToDouble(Sku::getTotalPrice)
                 .min();
@@ -331,7 +332,7 @@ public class StreamTest {
      * 获取元素总数
      */
     @Test
-    public void countTest(){
+    public void countTest() {
         long count = list.stream()
                 .count();
 
