@@ -8,7 +8,8 @@ public enum SkuEnum {
     CLOTHING(10, "服装类"),
     ELECTRONICS(20, "数码类"),
     SPORTS(30, "运动类"),
-    BOOKS(40, "图书类");
+    BOOKS(40, "图书类"),
+    NOTHING(0,"测试类(归约)");
 
     // 商品类型的编号
     private Integer code;
