@@ -3,6 +3,7 @@ package com.bhh;
 import com.bhh.entity.Sku;
 import com.bhh.enums.SkuEnum;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,4 +63,17 @@ public class SkuService {
     public static List<Sku> getSkuList() {
         return list;
     }
+
+    /**
+     * 入参
+     */
+    public void setSku(@Valid  Sku sku){
+    }
+    /**
+     * 出参
+     */
+    public void getSku(){}
+
+
 }
+
