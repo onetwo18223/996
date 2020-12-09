@@ -23,6 +23,7 @@ import java.util.*;
  */
 public class ValidationTest {
 
+
     //定义验证器对象
     private Validator validator;
 

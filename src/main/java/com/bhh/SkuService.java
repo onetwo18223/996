@@ -4,13 +4,14 @@ import com.bhh.entity.Sku;
 import com.bhh.enums.SkuEnum;
 
 import javax.validation.Valid;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 操作Sku类
  */
-public class SkuService {
+public class SkuService implements Serializable{
 
     /**
      * 定义并赋值集合

@@ -24,6 +24,9 @@ import java.util.Set;
  * @modified By
  */
 public class HttpUtil {
+
+    public static final String UTF_8 = "utf-8";
+
     public static String doGet(String url) throws Exception {
         HttpGet httpGet = new HttpGet(url);
         return execute(httpGet);
@@ -44,7 +47,7 @@ public class HttpUtil {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         CloseableHttpResponse response = httpClient.execute(request);
         if (200 == response.getStatusLine().getStatusCode()) {
-            return EntityUtils.toString(response.getEntity(), Charset.forName("utf-8"));
+            return EntityUtils.toString(response.getEntity(), Charset.forName(UTF_8));
         } else {
             System.out.println(EntityUtils.toString(response.getEntity(), Charset.forName("utf-8")));
         }

@@ -27,6 +27,9 @@ public class ReduceAndCollect {
         list = SkuService.getSkuList();
     }
 
+    /**
+     * 归约
+     */
     @Test
     public void reduceTest() {
         Sku sku = list.stream()
@@ -71,7 +74,9 @@ public class ReduceAndCollect {
         System.err.println(JSON.toJSONString(sku, true));
 
     }
-
+    /**
+     * 汇总
+     */
     @Test
     public void collectTest() {
         HashMap<Integer, List<Sku>> collect = list.stream()
