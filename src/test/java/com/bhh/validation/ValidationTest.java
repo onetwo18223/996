@@ -112,7 +112,7 @@ public class ValidationTest {
         });
 
         set.forEach((item) -> {
-            System.out.println(item.getMessage());
+            System.out.println("set:"+item.getMessage());
         });
     }
 

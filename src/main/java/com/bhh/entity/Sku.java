@@ -10,13 +10,12 @@ import javax.validation.GroupSequence;
 import javax.validation.constraints.*;
 import javax.validation.groups.Default;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Sku {
 
-        // 编号
+    // 编号
     @NotNull(message = "id不可为空", groups = LoginGroup.class)
     private Integer skuId;;
     // 商品名称
